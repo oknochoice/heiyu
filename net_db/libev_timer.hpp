@@ -10,7 +10,7 @@
 #define libev_timer_hpp
 
 #include <stdio.h>
-#include <libev/ev.h>
+#include <ev.h>
 #include <functional>
 #include <map>
 #include "macro.h"

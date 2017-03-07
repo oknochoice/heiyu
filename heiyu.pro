@@ -1,6 +1,6 @@
 QT += qml quick
 
-CONFIG += c++11
+CONFIG += c++14
 
 SOURCES += main.cpp \
     google/protobuf/compiler/cpp/cpp_enum.cc \
@@ -298,3 +298,38 @@ HEADERS += \
     net_db/netdb_yi.hpp \
     net_db/typemap.h \
     net_db/typemapre.h
+
+macx: LIBS += -L$$PWD/leveldb/lib/ -lleveldb
+
+INCLUDEPATH += $$PWD/leveldb/include
+DEPENDPATH += $$PWD/leveldb/include
+
+macx: PRE_TARGETDEPS += $$PWD/leveldb/lib/libleveldb.a
+
+macx: LIBS += -L$$PWD/leveldb/lib/ -lmemenv
+
+INCLUDEPATH += $$PWD/leveldb/include
+DEPENDPATH += $$PWD/leveldb/include
+
+macx: PRE_TARGETDEPS += $$PWD/leveldb/lib/libmemenv.a
+
+macx: LIBS += -L$$PWD/libev/lib/ -lev
+
+INCLUDEPATH += $$PWD/libev/include
+DEPENDPATH += $$PWD/libev/include
+
+macx: PRE_TARGETDEPS += $$PWD/libev/lib/libev.a
+
+macx: LIBS += -L$$PWD/openssl/lib/ -lcrypto
+
+INCLUDEPATH += $$PWD/openssl/include
+DEPENDPATH += $$PWD/openssl/include
+
+macx: PRE_TARGETDEPS += $$PWD/openssl/lib/libcrypto.a
+
+macx: LIBS += -L$$PWD/openssl/lib/ -lssl
+
+INCLUDEPATH += $$PWD/openssl/include
+DEPENDPATH += $$PWD/openssl/include
+
+macx: PRE_TARGETDEPS += $$PWD/openssl/lib/libssl.a

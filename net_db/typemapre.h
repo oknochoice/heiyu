@@ -1,7 +1,7 @@
 #ifndef TYPEMAPRE_H
 #define TYPEMAPRE_H
 
-#include "google/chat_message.pb.h"
+#include "net_db/chat_message.pb.h"
 #include "typemap.h"
 
 #ifdef __cpluscplus

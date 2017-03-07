@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "macro.h"
 #include <leveldb/db.h>
-#include <google/chat_message.pb.h>
+#include <net_db/chat_message.pb.h>
 #include "net_yi.h"
 #include "leveldb_yi.hpp"
 
